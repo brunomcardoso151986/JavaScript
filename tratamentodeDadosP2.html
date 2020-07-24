@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados - Parte 2</title>
+
+    <style>
+        body {
+            background-color: rgb(135, 135, 185);
+            color: #fff;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: rgba(255, 255, 0, 0.87);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!!!</h1>
+    <p>Já me livrei da maldição.</p>
+
+    <script>
+        /*
+        window.alert('Minha primeira mensagem.'); //Exibe uma mensagem de alerta na tela
+        window.confirm('Está gostando do JavaScript?'); //Exibe uma mensagem de confirmação na tela
+        window.prompt('Qual é o seu nome?'); //Pergunta na tela qual o seu nome, com o campo pra responder
+        */
+
+        /*
+        var nome = window.prompt('Qual é o seu nome?'); //Pergunta na tela qual o seu nome, com o campo pra responder
+        window.alert('É um grande prazer em te conhecer, ' + nome); //Exibe um alerta com a resposta para a pergunta, conforme informação inserida no campo
+        */
+
+        var n1 = Number(window.prompt('Digite um número:')); //Solicita que o usuário digite um número (prompt sempre recebe string). Number.parseInt converte string para número. Number faz a conversão da string para números inteiros ou float.
+        var n2 = Number(window.prompt('Digite outro número:')); //Solicita que o usuário digite outro número
+        var soma = n1 + n2; //Faz a soma entre os dois números digitados.
+        //window.alert('A soma entre os dois números é ' + soma); //Exibe o resultado da soma na tela (método antigo).
+        window.alert(`A soma entre ${n1} + ${n2} é ${soma}.`); //Exibe o resultado da soma na tela (método novo).
+
+        //Para converter qualquer número para string, devemos usar String(n1) ou n1.toString
+
+        /*
+            var s = 'JavaScript'
+            s.length        //mostra quantos caracteres a string tem
+            s.toUpperCase() //deixa todas as letras maiúsculas
+            s.toLowerCase() //deixa todas as letras minúsculas
+        */
+    </script>
+</body>
+</html>
