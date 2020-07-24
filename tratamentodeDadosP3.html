@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de Dados - Parte 3</title>
+
+    <style>
+        body {
+            background-color: royalblue;
+            font: normal 20pt Arial;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual é o seu nome?');
+        document.writeln(`Olá <strong>${nome}</strong>. Seu nome tem <strong>${nome.length}</strong> letras.</br>`); //Exibe o nome digitado e depois conta quantas letras o nome tem.
+
+        //Exibe o nome com todas as letras maiúsculas.
+        document.writeln(`Seu nome em letras maiúsculas é <strong>${nome.toUpperCase()}</strong>.</br>`);
+
+        //Exibe o nome com todas as letras minúsculas.
+        document.writeln(`Seu nome em letras minúsculas é <strong>${nome.toLowerCase()}</strong>.`);
+
+        /*Formatando Números
+            var n1;
+
+            n1.toFixed(2) //Coloca duas casas decimais após o ponto
+            n1.toFixed(2).replace('.',',') Coloca duas casas decimais após o ponto. Troca o ponto por vírgula
+            n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        */
+    </script>
+</body>
+</html>
