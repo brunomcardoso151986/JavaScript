@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao DOM</title>
+
+    <style>
+        body {
+            background: rgb(109, 109, 226);
+            color: #fff;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body
+        //Busca o elemento da tag p de posição 1, ou seja, o segundo parágrafo do documento
+        var p1 = window.document.getElementsByTagName('p')[1] 
+        //Busca o elemento cujo id seja msg
+        //var d = window.document.getElementById('msg')
+        //Muda a cor de fundo do elemento cujo id é msg
+        //d.style.background = 'green'
+        //Muda o texto do elemento de id msg
+        //d.innerText = 'Estou aguardando...'
+        
+        /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Aguardando...'
+        */
+
+        //var d = window.document.querySelector('div#msg') //Seleciona a query onde a div tenha id msg
+        var d = window.document.querySelector('div.msg') //Seleciona a query onde a div tenha classe msg
+        d.style.background = 'green'
+
+        /*
+        Exibe o conteúdo da tag p (no caso, do segundo parágrafo) no documento 
+        window.document.write('Está escrito assim: ' + p1.innerHTML)
+        //Altera o estilo (cor de fundo) do documento
+        corpo.style.background = 'green'
+        //Altera o estilo (cor) do primeiro parágrafo do documento
+        p1.style.color = 'yellow'
+        */
+        //window.alert(p1.innerText) //Exibe a mensagem do primeiro parágrafo na forma de alerta
+    </script>
+</body>
+</html>
