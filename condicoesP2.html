@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições em JavaScript - Parte 2</title>
+</head>
+<body>
+    <div>
+        <h1>Obrigatoriedade Eleitoral</h1>
+        Informe sua idade: <input type="number" name="txtIdade" id="txtIdade">
+        <input type="button" value="Verificar Idade" onclick="verificarIdade()">
+        <div id="resIdade"></div>
+    </div>
+    <div>
+        <h1>Mensagem conforme a hora do dia</h1>
+        Informe a hora (sem os minutos): <input type="number" name="txtHora" id="txtHora">
+        <input type="button" value="Informar Hora" onclick="informarHora()">
+        <div id="resHora"></div>
+    </div>
+    <div>
+        <h1>Mostrar dia da semana conforme o número correspondente</h1>
+        Informe o número do dia: <input type="number" name="txtDia" id="txtDia">
+        <input type="button" value="Mostrar Dia" onclick="mostrarDia()">
+        <div id="resDia"></div>
+
+        <script>
+            function verificarIdade() {
+                var txtI = window.document.querySelector('input#txtIdade')
+                var resIdade = window.document.querySelector('div#resIdade')
+                var idade = Number(txtI.value)
+                resIdade.innerHTML = `Você tem <strong>${idade} anos</strong>.`
+
+                if (idade < 16) {
+                    resIdade.innerHTML += '<p>Você não pode votar.</p>'
+                } else if (idade < 18 || idade > 65) {
+                    resIdade.innerHTML += '<p>O voto é opcional.</p>'
+                } else {
+                    resIdade.innerHTML += '<p>O voto é obrigatório.</p>'
+                }
+            }
+
+            function informarHora() {
+                var txtH = window.document.querySelector('input#txtHora')
+                var resHora = window.document.querySelector('div#resHora')
+                var hora = Number(txtH.value)
+                resHora.innerHTML = `Agora são ${hora} horas<strong></strong>.`
+
+                if (hora < 12) {
+                    resHora.innerHTML += '<p>Bom dia!</p>'
+                } else if (hora <= 18) {
+                    resHora.innerHTML += '<p>Boa tarde!</p>'
+                } else {
+                    resHora.innerHTML += '<p>Boa noite!</p>'
+                }
+            }
+
+            function mostrarDia() {
+                var txtD = window.document.querySelector('input#txtDia')
+                var resDia = window.document.querySelector('div#resDia')
+                var dia = Number(txtD.value)
+
+                switch (dia) {
+                    case 0:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 1:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 2:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 3:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 4:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 5:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    case 6:
+                        resDia.innerHTML = `Hoje é <strong>${dia}</strong>!`
+                        break
+                    default:
+                        resDia.innerHTML = 'Erro. Dia inválido!'
+                        break
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
